@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Book Despository!</title>
+</head>
+    <body>
+        <form method="GET" action="/library">
+            <h2>Please enter a book you would like to read!</h2>
+                Title: <input type="text" name="title">
+                <span>Author: <input type="text" name="author">
+            <button type="submit">Search</button></span>
+        </form>
+        <p><h2>Check from our selection of books!</h2></p>
+            <table border=1>
+            <tr data-th-each="book : ${booklist}">
+                <td data-th-text="${book.title}"></td>
+                <td data-th-text="${book.author}"></td>
+                 <td><img data-th-src="${book.image}" width=200 height=300/></td> 
+             </tr>
+            </table>             
+    </body>
+</html>

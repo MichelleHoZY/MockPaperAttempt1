@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send us your recommendations!</title>
+</head>
+    <body>
+        <form method="POST" action="/library">
+            Want us to add a book to our library? Tell us about it!
+            <p>Title: <input type="text" name="title" id="title" th:field="${title}"></p>
+            <p>Author: <input type="text" name="author" id="author" th:field="${author}"></p>
+            <p>Image URL: <input type="text" name="image" id="image" th:field="${image}"></p>
+            <button type="submit">Submit</button></span>
+        </form>
+    </body>
+</html>
